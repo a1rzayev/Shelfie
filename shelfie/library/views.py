@@ -3,6 +3,10 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth.forms import UserCreationForm
 from .models import Book
 
+def main_menu(request):
+    books = Book.objects.all()
+    return render(request, 'main_menu.html', {'books': books})
+
 def register(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)

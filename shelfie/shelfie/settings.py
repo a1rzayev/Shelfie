@@ -44,6 +44,7 @@ TEMPLATES = [
         },
     },
 ]
+AUTH_USER_MODEL = 'library.User'
 
 WSGI_APPLICATION = 'shelfie.wsgi.application'
 
@@ -82,5 +83,5 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = '/admin-dashboard/'
+LOGIN_REDIRECT_URL = '/main-menu/'
 LOGOUT_REDIRECT_URL = '/login/'
